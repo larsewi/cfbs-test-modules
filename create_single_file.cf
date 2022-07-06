@@ -1,0 +1,10 @@
+bundle agent create_single_file
+# @brief Create single file.
+{
+  meta:
+    linux::
+      "tags" slist => { "autorun" };
+
+  files:
+      "/tmp/test" create => "true";
+}

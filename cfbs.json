@@ -1,0 +1,15 @@
+{
+  "name": "create-single-file",
+  "description": "Create a single file.",
+  "type": "module",
+  "provides": {
+    "create-single-file": {
+      "description": "Create a single file.",
+      "tags": ["files"],
+      "dependencies": ["autorun"],
+      "steps": [
+        "copy ./create_single_file.cf services/autorun/create-single-file.cf"
+      ]
+    }
+  }
+}
