@@ -3,8 +3,10 @@ bundle agent create_single_file
 {
   meta:
     linux::
-      "tags" slist => { "autorun" };
+      "tags"
+        slist => { "autorun" };
 
   files:
-      "/tmp/test" create => "true";
+      "cfbs:create-single-file.filename_to_create"
+        create => "true";
 }

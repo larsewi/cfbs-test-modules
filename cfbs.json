@@ -7,6 +7,14 @@
       "description": "Create a single file.",
       "tags": ["files"],
       "dependencies": ["autorun"],
+      "input": [
+        {
+          "prompt": "What file should this module create?",
+          "type": "string",
+          "name": "filename_to_create",
+          "default": "/tmp/filename"
+        }
+      ],
       "steps": [
         "copy ./create_single_file.cf services/autorun/create-single-file.cf"
       ]
