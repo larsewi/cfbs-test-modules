@@ -7,7 +7,7 @@
       "description": "Create a single file.",
       "tags": ["files"],
       "dependencies": ["autorun"],
-      "input": [
+      "inputs": [
         {
           "prompt": "What file should this module create?",
           "type": "string",
