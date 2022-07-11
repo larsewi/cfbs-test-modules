@@ -16,7 +16,7 @@
         }
       ],
       "steps": [
-        "copy ./create_single_file.cf services/autorun/create-single-file.cf"
+        "copy ./create-single-file.cf services/autorun/create-single-file.cf"
       ]
     }
   }
