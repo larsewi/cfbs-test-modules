@@ -89,7 +89,7 @@
                 "value": {
                   "string": {
                     "prompt": "What content should this file have?",
-                    "default": "/tmp/filename"
+                    "default": "Hello World!"
                   }
                 }
               }

@@ -7,7 +7,7 @@ bundle agent create_multiple_files_with_content
 
   vars:
       "num_files"
-        int => length("$(cfbs:create-multiple-files_with_content.input");
+        int => length("$(cfbs:create-multiple-files_with_content.input)");
       "range"
         slist => { expandrange("[0-$(num_files)]", 1) };
 
