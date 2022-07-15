@@ -7,5 +7,5 @@ bundle agent create_single_file_with_content
 
   files:
       "$(cfbs:create_single_file_with_content.input[filename])"
-        content => "$(cfbs:create-single-file-with-content.input[content])";
+        content => "$(cfbs:create_single_file_with_content.input[content])";
 }
