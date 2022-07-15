@@ -53,13 +53,13 @@
       "dependencies": ["autorun"],
       "input": {
         "repeat": {
-          "while": "Do you want this module to create another file?",
           "do": {
             "string": {
               "prompt": "What file should this module create?",
               "default": "/tmp/filename"
             }
-          }
+          },
+          "while": "Do you want this module to create another file?"
         }
       },
       "steps": [
@@ -72,7 +72,6 @@
       "dependencies": ["autorun"],
       "input": {
         "repeat": {
-          "while": "Do you want this module to create another file?",
           "do": {
             "sequence": [
               {
@@ -94,7 +93,8 @@
                 }
               }
             ]
-          }
+          },
+          "while": "Do you want this module to create another file?"
         }
       },
       "steps": [
