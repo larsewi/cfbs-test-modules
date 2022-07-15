@@ -6,6 +6,6 @@ bundle agent create_multiple_files
         slist => { "autorun" };
 
   files:
-      "$(cfbs:create-multiple-files.input)"
+      "$(cfbs:create_multiple_files.input)"
         create => "true";
 }
