@@ -1,0 +1,18 @@
+bundle agent create_multiple_files
+# @brief Create multiple files.
+{
+  meta:
+      "tags"
+        slist => { "autorun" };
+
+  vars:
+      "num_files"
+        int => length("$(cfbs:create-multiple-files.input");
+      "range"
+        slist => { expandrange("[0-$(num_files)]", 1) };
+
+  files:
+      "$(cfbs:create-multiple-files.input[$(with)][filename])"
+        content => "$(cfbs:create-multiple-files.input[$(with)][content])",
+        with => "$(range)";
+}

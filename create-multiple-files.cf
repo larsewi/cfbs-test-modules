@@ -1,0 +1,11 @@
+bundle agent create_multiple_files
+# @brief Create multiple files.
+{
+  meta:
+      "tags"
+        slist => { "autorun" };
+
+  files:
+      "$(cfbs:create-multiple-files.input)"
+        create => "true";
+}

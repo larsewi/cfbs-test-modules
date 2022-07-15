@@ -6,6 +6,6 @@ bundle agent create_single_file
         slist => { "autorun" };
 
   files:
-      "$(cfbs:create-single-file.input)"
-        create => "true";
+      "$(cfbs:create-single-file.input[filename])"
+        content => "$(cfbs:create-single-file.input[content])";
 }

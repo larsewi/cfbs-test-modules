@@ -1,2 +1,2 @@
-# create-single-file
-Test module for cfbs using inputs
+# cfbs-test-modules
+Test modules for CFEngine Build
