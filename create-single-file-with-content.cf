@@ -1,11 +1,11 @@
-bundle agent create_single_file
-# @brief Create single file.
+bundle agent create_single_file_with_content
+# @brief Create single file with content.
 {
   meta:
       "tags"
         slist => { "autorun" };
 
   files:
-      "$(cfbs:create-single-file.input[filename])"
-        content => "$(cfbs:create-single-file.input[content])";
+      "$(cfbs:create-single-file-with-content.input[filename])"
+        content => "$(cfbs:create-single-file-with-content.input[content])";
 }

@@ -1,5 +1,5 @@
-bundle agent create_multiple_files
-# @brief Create multiple files.
+bundle agent create_multiple_files_with_content
+# @brief Create multiple files with content.
 {
   meta:
       "tags"
@@ -7,12 +7,12 @@ bundle agent create_multiple_files
 
   vars:
       "num_files"
-        int => length("$(cfbs:create-multiple-files.input");
+        int => length("$(cfbs:create-multiple-files_with_content.input");
       "range"
         slist => { expandrange("[0-$(num_files)]", 1) };
 
   files:
-      "$(cfbs:create-multiple-files.input[$(with)][filename])"
-        content => "$(cfbs:create-multiple-files.input[$(with)][content])",
+      "$(cfbs:create-multiple-files-with-content.input[$(with)][filename])"
+        content => "$(cfbs:create-multiple-files-with-content.input[$(with)][content])",
         with => "$(range)";
 }
