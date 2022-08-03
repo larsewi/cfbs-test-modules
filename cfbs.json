@@ -13,10 +13,10 @@
           "bundle": "my_bundle",
           "name": "filename",
           "comment": "This is a comment.",
-          "value": {
+          "questions": {
             "string": {
               "prompt": "What file should this module create?",
-              "default": "/tmp/filename"
+              "default": "/tmp/create-single-file.txt"
             }
           }
         }
@@ -33,13 +33,13 @@
         {
           "name": "file",
           "value": {
-            "sequence": [
+            "object": [
               {
                 "key": "name",
                 "value": {
                   "string": {
                     "prompt": "What file should this module create?",
-                    "default": "/tmp/filename"
+                    "default": "/tmp/create-single-file-with-content.txt"
                   }
                 }
               },
@@ -48,7 +48,7 @@
                 "value": {
                   "string": {
                     "prompt": "What content should this file have?",
-                    "default": "Hello World!"
+                    "default": "Created by module 'create-single-file-with-content'"
                   }
                 }
               }
@@ -68,7 +68,7 @@
         {
           "name": "filenames",
           "value": {
-            "repeat": {
+            "list": {
               "do": {
                 "string": {
                   "prompt": "What file should this module create?",
@@ -82,46 +82,6 @@
       ],
       "steps": [
         "copy ./create-multiple-files.cf services/autorun/create-multiple-files.cf"
-      ]
-    },
-    "create-multiple-files-with-content": {
-      "description": "Create multiple files.",
-      "tags": ["experimental"],
-      "dependencies": ["autorun"],
-      "input": [
-        {
-          "name": "files",
-          "value": {
-            "repeat": {
-              "do": {
-                "sequence": [
-                  {
-                    "key": "name",
-                    "value": {
-                      "string": {
-                        "prompt": "What file should this module create?",
-                        "default": "/tmp/filename"
-                      }
-                    }
-                  },
-                  {
-                    "key": "content",
-                    "value": {
-                      "string": {
-                        "prompt": "What content should this file have?",
-                        "default": "Hello World!"
-                      }
-                    }
-                  }
-                ]
-              },
-              "while": "Do you want this module to create another file?"
-            }
-          }
-        }
-      ],
-      "steps": [
-        "copy ./create-multiple-files-with-content.cf services/autorun/create-multiple-files-with-content.cf"
       ]
     }
   }
