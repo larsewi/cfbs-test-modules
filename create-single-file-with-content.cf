@@ -5,7 +5,15 @@ bundle agent create_single_file_with_content
       "tags"
         slist => { "autorun" };
 
+  classes:
+      "input_present"
+        expression => and(
+          isvariable("cfbs:create_single_file_with_content.file[name]"),
+          isvariable("cfbs:create_single_file_with_content.file[content]")
+        );
+
   files:
+    input_present::
       "$(cfbs:create_single_file_with_content.file[name])"
         content => "$(cfbs:create_single_file_with_content.file[content])";
 }

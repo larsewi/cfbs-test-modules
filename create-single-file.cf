@@ -5,7 +5,12 @@ bundle agent create_single_file
       "tags"
         slist => { "autorun" };
 
+  classes:
+      "input_present"
+        expression => isvariable("my_namespace:my_bundle.filename");
+
   files:
+    input_present::
       "$(my_namespace:my_bundle.filename)"
         create => "true";
 }

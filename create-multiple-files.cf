@@ -5,7 +5,12 @@ bundle agent create_multiple_files
       "tags"
         slist => { "autorun" };
 
+  classes:
+      "input_present"
+        expression => isvariable("cfbs:create_multiple_files.filenames");
+
   files:
+    input_present::
       "$(cfbs:create_multiple_files.filenames)"
         create => "true";
 }
