@@ -6,22 +6,8 @@
     "create-single-file": {
       "description": "Create a single file.",
       "tags": ["experimental"],
+      "subdirectory": "./create-single-file/",
       "dependencies": ["autorun"],
-      "input": [
-        {
-          "namespace": "my_namespace",
-          "bundle": "my_bundle",
-          "name": "filename",
-          "comment": "This is a comment.",
-          "prompt": {
-            "string": {
-              "label": "Filename",
-              "question": "What file should this module create?",
-              "default": "/tmp/create-single-file.txt"
-            }
-          }
-        }
-      ],
       "steps": [
         "copy ./create-single-file.cf services/autorun/create-single-file.cf"
       ]
@@ -29,35 +15,8 @@
     "create-single-file-with-content": {
       "description": "Create a single file with content.",
       "tags": ["experimental"],
+      "subdirectory": "./create-single-file-with-content/",
       "dependencies": ["autorun"],
-      "input": [
-        {
-          "name": "file",
-          "prompt": {
-            "object": [
-              {
-                "key": "name",
-                "value": {
-                  "string": {
-                    "label": "Filename",
-                    "question": "What file should this module create?",
-                    "default": null
-                  }
-                }
-              },
-              {
-                "key": "content",
-                "value": {
-                  "string": {
-                    "label": "Content",
-                    "question": "What content should this file have?"
-                  }
-                }
-              }
-            ]
-          }
-        }
-      ],
       "steps": [
         "copy ./create-single-file-with-content.cf services/autorun/create-single-file-with-content.cf"
       ]
@@ -65,23 +24,8 @@
     "create-multiple-files": {
       "description": "Create multiple files.",
       "tags": ["experimental"],
+      "subdirectory": "./create-multiple-files/",
       "dependencies": ["autorun"],
-      "input": [
-        {
-          "name": "filenames",
-          "prompt": {
-            "list": {
-              "do": {
-                "string": {
-                  "label": "Filename",
-                  "question": "What file should this module create?"
-                }
-              },
-              "while": "Do you want this module to create another file?"
-            }
-          }
-        }
-      ],
       "steps": [
         "copy ./create-multiple-files.cf services/autorun/create-multiple-files.cf"
       ]
