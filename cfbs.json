@@ -9,7 +9,7 @@
       "subdirectory": "./create-single-file/",
       "dependencies": ["autorun"],
       "steps": [
-        "copy ./create-single-file/create-single-file.cf services/autorun/create-single-file.cf"
+        "copy ./create-single-file.cf services/autorun/create-single-file.cf"
       ]
     },
     "create-single-file-with-content": {
@@ -18,7 +18,7 @@
       "subdirectory": "./create-single-file-with-content/",
       "dependencies": ["autorun"],
       "steps": [
-        "copy ./create-single-file-with-content/create-single-file-with-content.cf services/autorun/create-single-file-with-content.cf"
+        "copy ./create-single-file-with-content.cf services/autorun/create-single-file-with-content.cf"
       ]
     },
     "create-multiple-files": {
@@ -27,7 +27,7 @@
       "subdirectory": "./create-multiple-files/",
       "dependencies": ["autorun"],
       "steps": [
-        "copy ./create-multiple-files/create-multiple-files.cf services/autorun/create-multiple-files.cf"
+        "copy ./create-multiple-files.cf services/autorun/create-multiple-files.cf"
       ]
     }
   }
