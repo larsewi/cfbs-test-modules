@@ -8,12 +8,12 @@ bundle agent create_single_file_with_content
   classes:
       "input_present"
         expression => and(
-          isvariable("cfbs:create_single_file_with_content.file[name]"),
-          isvariable("cfbs:create_single_file_with_content.file[content]")
+          isvariable("cfbs:create_single_file_with_content.filename"),
+          isvariable("cfbs:create_single_file_with_content.content")
         );
 
   files:
     input_present::
-      "$(cfbs:create_single_file_with_content.file[name])"
-        content => "$(cfbs:create_single_file_with_content.file[content])";
+      "$(cfbs:create_single_file_with_content.filename)"
+        content => "$(cfbs:create_single_file_with_content.content)";
 }

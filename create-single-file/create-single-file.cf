@@ -7,10 +7,10 @@ bundle agent create_single_file
 
   classes:
       "input_present"
-        expression => isvariable("my_namespace:my_bundle.filename");
+        expression => isvariable("cfbs:create_single_file.filename");
 
   files:
     input_present::
-      "$(my_namespace:my_bundle.filename)"
+      "$(cfbs:create_single_file.filename)"
         create => "true";
 }

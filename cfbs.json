@@ -8,8 +8,17 @@
       "tags": ["experimental"],
       "subdirectory": "./create-single-file/",
       "dependencies": ["autorun"],
+      "input": [
+        {
+          "type": "string",
+          "variable": "filename",
+          "label": "Filename",
+          "question": "What file should this module create?"
+        }
+      ],
       "steps": [
-        "copy ./create-single-file.cf services/autorun/create-single-file.cf"
+        "copy ./create-single-file.cf services/autorun/create-single-file.cf",
+        "json ./input.json def.json"
       ]
     },
     "create-single-file-with-content": {
@@ -17,8 +26,23 @@
       "tags": ["experimental"],
       "subdirectory": "./create-single-file-with-content/",
       "dependencies": ["autorun"],
+      "input": [
+        {
+          "type": "string",
+          "variable": "filename",
+          "label": "Filename",
+          "question": "What file should this module create?"
+        },
+        {
+          "type": "string",
+          "variable": "content",
+          "label": "Content",
+          "question": "What content should this file have?"
+        }
+      ],
       "steps": [
-        "copy ./create-single-file-with-content.cf services/autorun/create-single-file-with-content.cf"
+        "copy ./create-single-file-with-content.cf services/autorun/create-single-file-with-content.cf",
+        "json ./input.json def.json"
       ]
     },
     "create-multiple-files": {
@@ -26,8 +50,54 @@
       "tags": ["experimental"],
       "subdirectory": "./create-multiple-files/",
       "dependencies": ["autorun"],
+      "input": [
+        {
+          "type": "list",
+          "variable": "files",
+          "label": "Files",
+          "subtype": {
+            "type": "string",
+            "label": "Filename",
+            "question": "What file should this module create?"
+          },
+          "while": "Do you want to create another file?"
+        }
+      ],
       "steps": [
-        "copy ./create-multiple-files.cf services/autorun/create-multiple-files.cf"
+        "copy ./create-multiple-files.cf services/autorun/create-multiple-files.cf",
+        "json ./input.json def.json"
+      ]
+    },
+    "create-multiple-files-with-content": {
+      "description": "Create multiple files with content.",
+      "tags": ["experimental"],
+      "subdirectory": "./create-multiple-files-with-content/",
+      "dependencies": ["autorun"],
+      "input": [
+        {
+          "type": "list",
+          "variable": "files",
+          "label": "Files",
+          "subtype": [
+            {
+              "key": "name",
+              "type": "string",
+              "label": "Name",
+              "question": "What file should this module create?"
+            },
+            {
+              "key": "content",
+              "type": "string",
+              "label": "Content",
+              "question": "What content should this file have?"
+            }
+          ],
+          "while": "Do you want to create another file?"
+        }
+      ],
+      "steps": [
+        "copy ./create-multiple-files.cf services/autorun/create-multiple-files.cf",
+        "json ./input.json def.json"
       ]
     }
   }

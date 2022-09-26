@@ -7,10 +7,10 @@ bundle agent create_multiple_files
 
   classes:
       "input_present"
-        expression => isvariable("cfbs:create_multiple_files.filenames");
+        expression => isvariable("cfbs:create_multiple_files.files");
 
   files:
     input_present::
-      "$(cfbs:create_multiple_files.filenames)"
+      "$(cfbs:create_multiple_files.files)"
         create => "true";
 }
