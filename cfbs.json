@@ -18,7 +18,7 @@
       ],
       "steps": [
         "copy ./create-single-file.cf services/autorun/create-single-file.cf",
-        "json ./input.json def.json"
+        "input ./input.json def.json"
       ]
     },
     "create-single-file-with-content": {
@@ -42,7 +42,7 @@
       ],
       "steps": [
         "copy ./create-single-file-with-content.cf services/autorun/create-single-file-with-content.cf",
-        "json ./input.json def.json"
+        "input ./input.json def.json"
       ]
     },
     "create-multiple-files": {
@@ -65,7 +65,7 @@
       ],
       "steps": [
         "copy ./create-multiple-files.cf services/autorun/create-multiple-files.cf",
-        "json ./input.json def.json"
+        "input ./input.json def.json"
       ]
     },
     "create-multiple-files-with-content": {
@@ -97,7 +97,7 @@
       ],
       "steps": [
         "copy ./create-multiple-files.cf services/autorun/create-multiple-files.cf",
-        "json ./input.json def.json"
+        "input ./input.json def.json"
       ]
     }
   }
