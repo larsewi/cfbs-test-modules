@@ -99,7 +99,7 @@
         }
       ],
       "steps": [
-        "copy ./create-multiple-files.cf services/autorun/create-multiple-files.cf",
+        "copy ./create-multiple-files-with-content.cf services/autorun/create-multiple-files-with-content.cf",
         "input ./input.json def.json"
       ]
     }
