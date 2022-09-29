@@ -7,18 +7,18 @@ bundle agent create_multiple_files_with_content
 
   classes:
       "input_present"
-        expression => isvariable("cfbs:create_single_file_with_content.files");
+        expression => isvariable("my_namespace:my_bundle.files");
 
   vars:
     input_present::
       "num_files"
         string => format("%d", concat(eval("$(with)-1", math, infix))),
-        with => concat(length("cfbs:create_multiple_files_with_content.files"));
+        with => concat(length("my_namespace:my_bundle.files"));
       "range"
         slist => { expandrange("[0-$(num_files)]", 1) };
 
   files:
     input_present::
-      "$(cfbs:create_single_file_with_content.files[$(range)][name])"
-        content => "$(cfbs:create_single_file_with_content.files[$(range)][content])";
+      "$(my_namespace:my_bundle.files[$(range)][name])"
+        content => "$(my_namespace:my_bundle.files[$(range)][content])";
 }

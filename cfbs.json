@@ -76,6 +76,9 @@
       "input": [
         {
           "type": "list",
+          "namespace": "my_namespace",
+          "bundle": "my_bundle",
+          "comment": "My comment.",
           "variable": "files",
           "label": "Files",
           "subtype": [
