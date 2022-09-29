@@ -6,7 +6,7 @@
     "create-single-file": {
       "description": "Create a single file.",
       "tags": ["experimental"],
-      "subdirectory": "./create-single-file/",
+      "subdirectory": "create-single-file",
       "dependencies": ["autorun"],
       "input": [
         {
@@ -24,7 +24,7 @@
     "create-single-file-with-content": {
       "description": "Create a single file with content.",
       "tags": ["experimental"],
-      "subdirectory": "./create-single-file-with-content/",
+      "subdirectory": "create-single-file-with-content",
       "dependencies": ["autorun"],
       "input": [
         {
@@ -48,7 +48,7 @@
     "create-multiple-files": {
       "description": "Create multiple files.",
       "tags": ["experimental"],
-      "subdirectory": "./create-multiple-files/",
+      "subdirectory": "create-multiple-files",
       "dependencies": ["autorun"],
       "input": [
         {
@@ -71,7 +71,7 @@
     "create-multiple-files-with-content": {
       "description": "Create multiple files with content.",
       "tags": ["experimental"],
-      "subdirectory": "./create-multiple-files-with-content/",
+      "subdirectory": "create-multiple-files-with-content",
       "dependencies": ["autorun"],
       "input": [
         {
